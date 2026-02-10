@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sapna Cream | Unlock Your Radiance</title>
+    <meta name="description" content="Discover Sapna Cream - The ultimate luxury skincare for glowing, radiant skin.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        cream: {
+                            50: '#FDFBF7',
+                            100: '#FBF5EB',
+                            200: '#F5E6D0',
+                            300: '#EAD4B0',
+                            400: '#DFBE8D',
+                            500: '#D4A86A', // Gold-ish
+                            600: '#AA824B',
+                            700: '#806037',
+                            800: '#5D4427',
+                            900: '#3E2D1A',
+                        },
+                        rose: {
+                            50: '#FFF0F5',   // Lavender Blush
+                            100: '#FFE4E1',  // Misty Rose
+                            200: '#FFC0CB',  // Pink
+                            300: '#FFB6C1',  // Light Pink
+                            400: '#DB7093',  // Pale Violet Red
+                            500: '#C71585',  // Medium Violet Red
+                            600: '#B03060',  // Maroon (Crayola)
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #FDFBF7;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #D4A86A;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #AA824B;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #FDFBF7 0%, #FFF0F5 100%);
+        }
+    </style>
+</head>
+
+<body class="font-sans text-gray-800 bg-cream-50 antialiased selection:bg-rose-200 selection:text-rose-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="font-serif text-3xl font-bold text-cream-600 tracking-wider">
+                        Sapna<span class="text-rose-400">.</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html"
+                        class="text-gray-600 hover:text-cream-600 transition-colors font-medium">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-cream-600 transition-colors font-medium">Our
+                        Story</a>
+                    <a href="shop.html"
+                        class="text-gray-600 hover:text-cream-600 transition-colors font-medium">Shop</a>
+                    <a href="contact.html"
+                        class="text-gray-600 hover:text-cream-600 transition-colors font-medium">Contact</a>
+                    <a href="shop.html"
+                        class="bg-cream-500 hover:bg-cream-600 text-white px-6 py-2 rounded-full transition-all transform hover:scale-105 shadow-lg hover:shadow-xl font-medium">
+                        Buy Now
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white/95 backdrop-blur-md absolute w-full border-b border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="index.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-cream-600 hover:bg-rose-50">Home</a>
+                <a href="about.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-cream-600 hover:bg-rose-50">Our
+                    Story</a>
+                <a href="shop.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-cream-600 hover:bg-rose-50">Shop</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-cream-600 hover:bg-rose-50">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden hero-gradient">
+        <!-- Decorative blobs -->
+        <div
+            class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-rose-200 opacity-20 blur-3xl filter animate-float">
+        </div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 rounded-full bg-cream-300 opacity-20 blur-3xl filter animate-float"
+            style="animation-delay: 2s;"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
+                <div class="lg:col-span-6 text-center lg:text-left mb-12 lg:mb-0 animate-fade-in-up">
+                    <span
+                        class="inline-block py-1 px-3 rounded-full bg-rose-100 text-rose-600 text-sm font-semibold tracking-wide uppercase mb-4">
+                        New Arrival
+                    </span>
+                    <h1 class="text-5xl lg:text-7xl font-serif font-bold text-gray-900 leading-tight mb-6">
+                        Reveal Your <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cream-500 to-rose-400">Inner
+                            Glow</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0">
+                        Experience the magic of <span class="font-bold text-gray-800">Sapna Cream</span>.
+                        Infused with rare botanical extracts to hydrate, brighten, and rejuvenate your skin overnight.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="shop.html"
+                            class="px-8 py-4 bg-gray-900 text-white rounded-full font-medium hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            Shop Collection
+                        </a>
+                        <a href="about.html"
+                            class="px-8 py-4 bg-white text-gray-900 border border-gray-200 rounded-full font-medium hover:bg-gray-50 transition-all shadow-sm hover:shadow-md">
+                            Learn More
+                        </a>
+                    </div>
+
+                    <div class="mt-12 flex items-center justify-center lg:justify-start space-x-8 text-gray-500">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-cream-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>organic</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-cream-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Cruelty Free</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-cream-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Dermatologist Tested</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 relative mt-12 lg:mt-0 animate-float">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-tr from-rose-200 to-cream-200 rounded-full blur-3xl opacity-30 transform scale-90">
+                    </div>
+                    <img src="images/hero.png" alt="Sapna Cream Luxury Jar"
+                        class="relative rounded-2xl shadow-2xl w-full object-cover transform perspective-1000 hover:rotate-2 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl lg:text-4xl font-serif font-bold text-gray-900 mb-4">Why Choose Sapna Cream?</h2>
+                <div class="w-24 h-1 bg-cream-500 mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-600 text-lg">
+                    Crafted with precision and care, our formula is designed to bring out the best in your skin,
+                    naturally.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Feature 1 -->
+                <div class="text-center group p-8 rounded-2xl hover:bg-cream-50 transition-colors duration-300">
+                    <div
+                        class="w-16 h-16 mx-auto bg-rose-100 rounded-full flex items-center justify-center text-rose-500 mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Deep Hydration</h3>
+                    <p class="text-gray-600 leading-relaxed">Penetrates deep into the skin layers to provide
+                        long-lasting moisture and plumpness.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="text-center group p-8 rounded-2xl hover:bg-cream-50 transition-colors duration-300">
+                    <div
+                        class="w-16 h-16 mx-auto bg-cream-100 rounded-full flex items-center justify-center text-cream-600 mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Natural Glow</h3>
+                    <p class="text-gray-600 leading-relaxed">Restores your skin's natural radiance with Vitamin C and
+                        brightening botanical extracts.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="text-center group p-8 rounded-2xl hover:bg-cream-50 transition-colors duration-300">
+                    <div
+                        class="w-16 h-16 mx-auto bg-rose-100 rounded-full flex items-center justify-center text-rose-500 mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Anti-Aging</h3>
+                    <p class="text-gray-600 leading-relaxed">Reduces fine lines and wrinkles, promoting youthful
+                        elasticity and firmness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Highlight -->
+    <section class="py-24 bg-cream-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div class="relative h-96 lg:h-auto">
+                        <img src="images/hero.png" alt="Sapna Cream Product"
+                            class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gray-900 opacity-10"></div>
+                    </div>
+                    <div class="p-12 lg:p-16 flex flex-col justify-center">
+                        <h2 class="text-3xl lg:text-4xl font-serif font-bold text-gray-900 mb-6">The Perfect Night
+                            Routine</h2>
+                        <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+                            Transform your nightly ritual with Sapna Cream using just a pea-sized amount.
+                            Massage gently into clean skin and wake up to a visibly softer, smoother complexion.
+                        </p>
+                        <ul class="space-y-4 mb-10">
+                            <li class="flex items-center text-gray-700">
+                                <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Non-greasy formula
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Suitable for all skin types
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Paraben & Sulfate free
+                            </li>
+                        </ul>
+                        <div>
+                            <a href="shop.html"
+                                class="inline-block px-8 py-4 bg-cream-600 text-white rounded-full font-medium hover:bg-cream-700 transition-colors">
+                                Buy Sapna Cream - $29.99
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="#" class="font-serif text-3xl font-bold text-white tracking-wider mb-6 block">
+                        Sapna<span class="text-rose-400">.</span>
+                    </a>
+                    <p class="text-gray-400 leading-relaxed max-w-sm">
+                        Redefining beauty with nature's finest ingredients.
+                        Sapna Cream is more than a product; it's a promise of radiant confidence.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-cream-400">Explore</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="shop.html" class="hover:text-white transition-colors">Shop</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">Our Story</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-cream-400">Connect</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Instagram</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Facebook</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2026 Sapna Cream. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story | Sapna Cream</title>
+    <meta name="description" content="The story behind Sapna Cream - Born from a dream to create the perfect skincare.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        cream: {
+                            50: '#FDFBF7',
+                            100: '#FBF5EB',
+                            200: '#F5E6D0',
+                            300: '#EAD4B0',
+                            400: '#DFBE8D',
+                            500: '#D4A86A',
+                            600: '#AA824B',
+                            700: '#806037',
+                            800: '#5D4427',
+                            900: '#3E2D1A',
+                        },
+                        rose: {
+                            50: '#FFF0F5',
+                            100: '#FFE4E1',
+                            200: '#FFC0CB',
+                            300: '#FFB6C1',
+                            400: '#DB7093',
+                            500: '#C71585',
+                            600: '#B03060',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+
+<body class="font-sans text-gray-800 bg-cream-50 antialiased">
+
+    <!-- Navigation (Same as index) -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="font-serif text-3xl font-bold text-cream-600 tracking-wider">
+                        Sapna<span class="text-rose-400">.</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html"
+                        class="text-gray-600 hover:text-cream-600 transition-colors font-medium">Home</a>
+                    <a href="about.html" class="text-cream-600 font-bold transition-colors">Our Story</a>
+                    <a href="shop.html"
+                        class="text-gray-600 hover:text-cream-600 transition-colors font-medium">Shop</a>
+                    <a href="contact.html"
+                        class="text-gray-600 hover:text-cream-600 transition-colors font-medium">Contact</a>
+                    <a href="shop.html"
+                        class="bg-cream-500 hover:bg-cream-600 text-white px-6 py-2 rounded-full transition-all transform hover:scale-105 shadow-lg hover:shadow-xl font-medium">
+                        Buy Now
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white/95 backdrop-blur-md absolute w-full border-b border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="index.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-cream-600 hover:bg-rose-50">Home</a>
+                <a href="about.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-cream-600 bg-rose-50">Our Story</a>
+                <a href="shop.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-cream-600 hover:bg-rose-50">Shop</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-cream-600 hover:bg-rose-50">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="pt-32 pb-12 text-center bg-rose-50">
+        <h1 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">The Sapna Story</h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto px-4">"Sapna" means dream. Ours was simple: to bottle the
+            essence of timeless beauty.</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
+
+        <!-- Section 1 -->
+        <section class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <div
+                    class="relative bg-cream-200 rounded-2xl p-2 transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                    <img src="images/texture.png" alt="Sapna Cream Origin"
+                        class="rounded-xl shadow-lg w-full h-auto object-cover aspect-square">
+                </div>
+            </div>
+            <div class="md:w-1/2 space-y-6">
+                <h2 class="text-3xl font-serif font-bold text-gray-900">A Dream Realized</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    It started in a small kitchen, experimenting with ancient Ayurvedic recipes passed down through
+                    generations. We knew that nature held the secrets to glowing skin, but modern life had made us
+                    forget them.
+                </p>
+                <p class="text-gray-600 leading-relaxed">
+                    Sapna Cream combines the potency of Saffron, the soothing properties of Rose, and the luxury of 24K
+                    Gold dust to create a formula that doesn't just treat your skin—it transforms it.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="text-center bg-white p-12 rounded-3xl shadow-xl border border-gray-100">
+            <h2 class="text-3xl font-serif font-bold text-gray-900 mb-8">Our Philosophy</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-cream-600 mb-2">Purity First</h3>
+                    <p class="text-gray-500">No harsh chemicals. Only ingredients you can pronounce and trust.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-cream-600 mb-2">Cruelty Free</h3>
+                    <p class="text-gray-500">Beauty should never come at the cost of another living being.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-cream-600 mb-2">Sustainability</h3>
+                    <p class="text-gray-500">Eco-friendly packaging and responsible sourcing for a greener planet.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-20 pb-10 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
+            <p>&copy; 2026 Sapna Cream. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
